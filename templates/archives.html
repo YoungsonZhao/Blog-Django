@@ -1,0 +1,28 @@
+	{% extends "base.html" %}
+<!-- Post -->
+{% load static %}
+{% block content_post %}
+  {% for post in post_list%}
+      <article class="box post post-excerpt">
+        <header style="padding-bottom: -20px">
+          <!--
+            Note: Titles and subtitles will wrap automatically when necessary, so don't worry
+            if they get too long. You can also remove the <p> entirely if you don't
+            need a subtitle.
+          -->
+          <a href="{% url "article" id=post.id %}" style="font-size:24px">{{ post.title }}</a>
+        </header>
+        <div class="info">
+          <!--
+            Note: The date should be formatted exactly as it's shown below. In particular, the
+            "least significant" characters of the month should be encapsulated in a <span>
+            element to denote what gets dropped in 1200px mode (eg. the "uary" in "January").
+            Oh, and if you don't need a date for a particular page or post you can simply delete
+            the entire "date" element.
+
+          -->
+          <span class="newdate"><span class="newyear" style="font-size:16px">{{post.date_time.year}}.{{post.date_time.month}}.{{post.date_time.day}}</span></span>
+        </div>
+       </article>
+  {% endfor %}
+{% endblock %}

@@ -1,0 +1,69 @@
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+
+from django.shortcuts import render
+# from django.http import HttpResponse
+from article.models import Article
+
+
+import math
+
+
+# Create your views here.
+def home(request):
+        post_list = Article.objects.all()  # 获取全部的Article对象
+        post_num = len(post_list)+30
+        page_num = int(math.ceil(post_num/3.0))
+        if page_num > 4:
+            page_max = page_num     # 两种模式，一种小于等于4页；一种大于4页
+        else:
+            page_max = 0
+        if post_num > 3:
+            return render(request, 'index.html', {'post_list': post_list[0:3], 'page_num': range(1,page_num+1), 'page_max': page_max, 'currt_pg': 1})
+        else:
+            return render(request, 'index.html', {'post_list': post_list, 'page_num': range(1,page_num+1), 'page_max': page_max, 'currt_pg': 1})
+
+
+def index(request, pg):
+        pg = int(pg)
+        post_list = Article.objects.all()  #获取全部的Article对象
+        post_num = len(post_list)+30
+        if post_num < 3*(pg-1)+1:   # 处理超页的情况
+            pg = pg -1
+        if pg < 1:    # 处理页码为零的情况
+            pg=1
+        page_num = int(math.ceil(post_num/3.0))
+        if page_num > 4:
+            page_max = page_num     # 两种模式，一种小于等于4页；一种大于4页
+        else:
+            page_max = 0
+        #return render(request, 'home.html', {'post_list' : post_list})
+        if post_num > 3*pg:
+            return render(request, 'index.html', {'post_list': post_list[3*(pg-1):3*pg], 'page_num': range(1,page_num+1), 'page_max': page_max, 'currt_pg': pg})
+        else:
+            return render(request, 'index.html', {'post_list': post_list[3*(pg-1):post_num], 'page_num': range(1,page_num+1), 'page_max': page_max, 'currt_pg':pg})
+
+
+
+def article(request, id):
+        post = Article.objects.get(pk=id)
+        return render(request, 'article.html', {'post': post})
+
+
+def test(request) :
+        post = Article.objects.all()[1]
+        return render(request, 'test.html', {'content': post.content})
+
+
+def archives(request) :
+        post_list = Article.objects.all()
+        return render(request, 'archives.html', {'post_list': post_list})
+
+
+def photography(request) :
+        post = Article.objects.all()[1]
+        return render(request, 'test.html', {'content': post.content})
+
+
+def about_me(request) :
+        return render(request, 'about_me.html')
