@@ -3,8 +3,8 @@
 {% load static %}
 {% block content_post %}
   {% for post in post_list%}
-      <article class="box post post-excerpt" style="padding: 0px 0px 40px 0px; margin-bottom: 0px">
-        <header style="padding-bottom: 0px; padding-top: 5px; margin-bottom: 0px">
+      <article class="box post post-excerpt" style="padding: 0px 0px 40px 0px; margin: 0">
+        <header style="padding-bottom: 0px; padding-top: 5px; margin: 0">
           <!--
             Note: Titles and subtitles will wrap automatically when necessary, so don't worry
             if they get too long. You can also remove the <p> entirely if you don't
@@ -12,7 +12,7 @@
           -->
           <a href="{% url "article" id=post.id %}" style="font-size:20px">{{ post.title }}</a>
         </header>
-        <div class="info" style="padding-bottom: 5px; padding-top: 5px; padding-left: 6px; margin: 0">
+        <div class="info" style="padding-bottom: 5px; padding-top: 5px; margin: 0">
           <!--
             Note: The date should be formatted exactly as it's shown below. In particular, the
             "least significant" characters of the month should be encapsulated in a <span>
@@ -21,9 +21,9 @@
             the entire "date" element.
 
           -->
-          <span class="newdate" style="padding: 0px; margin: 0px">
+          <span class="newdate" style="padding: 0; margin: 0">
             <span class="newyear" style="font-size:16px; font-weight: 700; padding: 0; margin: 0">
-              {{post.date_time.year}}.{% if post.date_time.month < 10 %}0{{post.date_time.month}}{% else %}{{post.date_time.month}}{% endif %}.{% if post.date_time.day < 10 %}0{{post.date_time.day}}{% else %}{{post.date_time.day}}{% endif %}
+              {{post.date_time.year}}.{{post.date_time.month}}.{{post.date_time.day}}
             </span>
           </span>
         </div>

@@ -2103,7 +2103,7 @@
 	#nav li {
 		border-top: solid 1px rgba(0, 0, 0, 0.25);
 		box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.075);
-		padding: 0.5em 0 0.5em 0;
+		padding: 0.5em 0 0.4em 0;
 	}
 
 		#nav li:first-child {
@@ -2128,16 +2128,17 @@
 			transition: background-color .25s ease-in-out, color .25s ease-in-out;
 		}
 
-		#nav li.current a {
+		#nav li.active a {
 			background-color: #272E39 !important;
 			background-color: rgba(0, 0, 0, 0.15) !important;
 			box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0.25em 0 rgba(0, 0, 0, 0.25);
 			font-weight: 700;
+      font-size: 1.35em;
 			color: #fff;
 		}
 
 		#nav li:hover a {
-			background-color: rgba(255, 255, 255, 0.1);
+			background-color: rgba(255, 255, 255, 0.25);
 			color: #fff;
 		}
 
@@ -2414,14 +2415,16 @@
 				font-weight: 700;
 				font-size: 2em;
 				letter-spacing: 0.0em;
+				padding: 0.5em 0.0em;
 			}
 
 				#logo a {
 					display: block;
 					background-color: #c94663;
 					background-image: url("images/bg01.png");
-					padding: 0.0em 0.0em;
-					border-radius: 0.35em;
+					padding: 0.5em 0.0em;
+          margin: 0.5em 0.0em;
+					border-radius: 0.5em;
 					text-align: center;
 					box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.15), 0 0.025em 0.15em 0em rgba(0, 0, 0, 0.25);
 					text-decoration: none;
@@ -2543,7 +2546,7 @@
 					font-weight: 400;
 					text-align: center;
 					display: block;
-					font-size: 1.5em;
+					font-size: 1.2em;
 					color: #999;
 					border-bottom: solid 1px #ddd;
 					padding: 0 0 1em 0;
@@ -2565,23 +2568,23 @@
 
         .box.post .info .date .year {
 						display: block;
-						margin: 0.25em 0 0 0;
-						font-size: 1.5em;
-						font-weight: 700;
-						color: #1b252a;
+						margin: 0.15em 0 0 0;
+						font-size: 1.2em;
+						font-weight: 500;
+						color: red;
         }
 					.box.post .info .date .month {
 						display: block;
-						margin: 0.25em 0 0 0;
-						font-size: 1.5em;
-						font-weight: 700;
+						margin: 0.15em 0 0 0;
+						font-size: 1.2em;
+						font-weight: 500;
 						color: #1b252a;
 					}
 
 					.box.post .newinfo .newdate .newyear {
 						display: block;
 						margin: 0.25em 0 0 0;
-						font-size: 1.5em;
+						font-size: 2.5em;
 						font-weight: 700;
 						color: red;
 					}
@@ -2592,7 +2595,7 @@
 				}
 
 					.box.post .info .stats li {
-						margin: 1.25em 0 0 0;
+						margin: 0.5em 0 0 0;
 					}
 
 						.box.post .info .stats li a {
@@ -2720,7 +2723,7 @@
 		/* Logo */
 
 			#logo {
-				display: none;
+				display: block;
 			}
 
 		/* Nav */
@@ -2844,7 +2847,9 @@
 		/* Logo */
 
 			#logo {
-				display: none;
+				display: block;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
 			}
 
 		/* Nav */
