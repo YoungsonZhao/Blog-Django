@@ -18,6 +18,7 @@ from django.contrib import admin
 from article.views import home, article, test, index, archives, photography, about_me
 
 urlpatterns = [
+    url(r'^$', home, name='home'),
     url(r'^admin/', admin.site.urls),
     url(r'^home', home, name='home'),
     url(r'^index', home, name='home'),
