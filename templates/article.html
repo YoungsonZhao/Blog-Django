@@ -9,8 +9,8 @@
         if they get too long. You can also remove the <p> entirely if you don't
         need a subtitle.
       -->
-      <h2 style="font-size: 2em"><a href="{% url "article" id=post.id %}">{{ post.title }}</a></h2>
-      <p style="font-size: 1.6em">{{ post.category }}</p>
+      <h2><a href="{% url "article" id=post.id %}">{{ post.title }}</a></h2>
+      <p>{{ post.category }}</p>
     </header>
     <div class="info">
       <!--
@@ -19,48 +19,54 @@
         element to denote what gets dropped in 1200px mode (eg. the "uary" in "January").
         Oh, and if you don't need a date for a particular page or post you can simply delete
         the entire "date" element.
-
       -->
-        <span class="date" style="font-size:1.0em;font-weight: 300; margin:0em">
-          <span class="year" style="padding: 0em; margin:0em">{{post.date_time.year}}</span>
+        <span class="date">
+          <span class="year">{{post.date_time.year}}</span>
           {% if post.date_time.month == 1 %}
-              <span class="month" style="padding: 0em; margin:0em">Jan.</span>
+              <span class="month">Jan.</span>
           {% elif post.date_time.month == 2 %}
-              <span class="month" style="padding: 0em; margin:0em">Feb.</span>
+              <span class="month">Feb.</span>
           {% elif post.date_time.month == 3 %}
-              <span class="month" style="padding: 0em; margin:0em">Mar.</span>
+              <span class="month">Mar.</span>
           {% elif post.date_time.month == 4 %}
-              <span class="month" style="padding: 0em; margin:0em">Apr.</span>
+              <span class="month">Apr.</span>
           {% elif post.date_time.month == 5 %}
-              <span class="month" style="padding: 0em; margin:0em">May.</span>
+              <span class="month">May.</span>
           {% elif post.date_time.month == 6 %}
-              <span class="month" style="padding: 0em; margin:0em">Jun.</span>
+              <span class="month">Jun.</span>
           {% elif post.date_time.month == 7 %}
-              <span class="month" style="padding: 0em; margin:0em">Jul.</span>
+              <span class="month">Jul.</span>
           {% elif post.date_time.month == 8 %}
-              <span class="month" style="padding: 0em; margin:0em">Aug.</span>
+              <span class="month">Aug.</span>
           {% elif post.date_time.month == 9 %}
-              <span class="month" style="padding: 0em; margin:0em">Sep.</span>
+              <span class="month">Sep.</span>
           {% elif post.date_time.month == 10 %}
-              <span class="month" style="padding: 0em; margin:0em">Oct.</span>
+              <span class="month">Oct.</span>
           {% elif post.date_time.month == 11 %}
-              <span class="month" style="padding: 0em; margin:0em">Mov.</span>
+              <span class="month">Mov.</span>
           {% else %}
-              <span class="month" style="padding: 0em; margin:0em">Dec.</span>
+              <span class="month">Dec.</span>
           {% endif %}
           {% if post.date_time.day < 10 %}
-              <span class="month" style="padding: 0em; margin:0em">0{{post.date_time.day}}</span>
+              <span class="month">0{{post.date_time.day}}</span>
           {% else %}
-              <span class="month" style="padding: 0em; margin:0em">{{post.date_time.day}}</span>
+              <span class="month">{{post.date_time.day}}</span>
           {% endif %}
         </span>
 
         <ul class="stats" style="padding:0em; margin:0em">
-          <li style="padding: 0em; margin:0em"><a href="#" class="icon fa-comment">16</a></li>
-          <li style="padding: 0em; margin:0em"><a href="#" class="icon fa-heart">32</a></li>
+          <li><a href="#" class="icon fa-comment">16</a></li>
+          <li><a href="#" class="icon fa-heart">32</a></li>
         </ul>
     </div>
     <a href="#" class="image featured"><img src="{% static "images/pic01.jpg" %}" alt="" /></a>
     {{ post.abstract | safe }}
   </article>
 {% endblock %}
+
+{% block content_nav %}
+<li><a href="{% url "home" %}">Latest Posts</a></li>
+<li><a href="{% url "archives" %}">Archives</a></li>
+<li><a href="{% url "photography" %}">Photography</a></li>
+<li><a href="{% url "about_me" %}">About Me</a></li>
+{% endblock%}

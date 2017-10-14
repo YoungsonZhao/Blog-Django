@@ -2098,12 +2098,16 @@
 
 	#nav ul {
 		margin: 0;
+    font-size: 1.2em;
+    font-weight: 700;
 	}
 
 	#nav li {
 		border-top: solid 1px rgba(0, 0, 0, 0.25);
 		box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.075);
 		padding: 0.5em 0 0.4em 0;
+    font-size: 1.2em;
+    font-weight: 700;
 	}
 
 		#nav li:first-child {
@@ -2126,14 +2130,16 @@
 			-webkit-transition: background-color .25s ease-in-out, color .25s ease-in-out;
 			-ms-transition: background-color .25s ease-in-out, color .25s ease-in-out;
 			transition: background-color .25s ease-in-out, color .25s ease-in-out;
+      font-size: 1.2em;
+      font-weight: 700;
 		}
 
-		#nav li.active a {
+		#nav li.current a {
 			background-color: #272E39 !important;
 			background-color: rgba(0, 0, 0, 0.15) !important;
 			box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0.25em 0 rgba(0, 0, 0, 0.25);
-			font-weight: 700;
-      font-size: 1.35em;
+			font-weight: 900;
+      font-size: 1.2em;
 			color: #fff;
 		}
 
@@ -2154,7 +2160,9 @@
 		-ms-transition: -ms-transform 0.5s ease;
 		transition: transform 0.5s ease;
 		display: none;
-		height: 44px;
+		height: 62px;
+    padding-top:8px;
+    margin-top: 0px;
 		left: 0;
 		position: fixed;
 		top: 0;
@@ -2185,6 +2193,8 @@
 			width: 80px;
 			height: 60px;
 			position: absolute;
+      margin-top: 7px;
+      padding-top: 5px;
 			top: 0;
 			left: 0;
 		}
@@ -2196,13 +2206,14 @@
 				font-weight: normal;
 				-webkit-font-smoothing: antialiased;
 				-moz-osx-font-smoothing: grayscale;
-				content: '\f0c9';
+				content: '\f00b';
 				display: block;
 				position: absolute;
 				top: 7px;
-				font-size: 14px;
+				font-size: 24px;
+        padding-top: 4px;
 				width: 50px;
-				height: 30px;
+				height: 36px;
 				line-height: 30px;
 				background: #c94663 url("images/bg01.png");
 				border-radius: 5px;
@@ -2422,8 +2433,8 @@
 					display: block;
 					background-color: #c94663;
 					background-image: url("images/bg01.png");
-					padding: 0.5em 0.0em;
-          margin: 0.5em 0.0em;
+					padding-top: 0.45em;
+          padding-bottom: 0.4em;
 					border-radius: 0.5em;
 					text-align: center;
 					box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.15), 0 0.025em 0.15em 0em rgba(0, 0, 0, 0.25);
@@ -2500,7 +2511,8 @@
 
 			.box.post header {
 				padding: 2.75em 0 0 0;
-				margin: 0 0 3em 0;
+				margin: 0 0 1em 0;
+        font-size: 0.6em;
 			}
 
 				.box.post header > p {
@@ -2508,7 +2520,7 @@
 					line-height: 1.5em;
 					position: relative;
 					top: -0.65em;
-					margin-bottom: -0.65em;
+					margin-bottom: -0em;
 				}
 
 			.box.post .info {
@@ -2519,7 +2531,7 @@
 				background-image: url("images/bg02.png");
 				left: -10.5em;
 				top: 0;
-				padding: 1.0em 1em 1.0em 1em;
+				padding: 0.5em 0.75em 0.5em 0.75em;
 				border-top-left-radius: 0.4em;
 				border-bottom-left-radius: 0.4em;
 				box-shadow: 0.25em 0 0 0 #fbfbfb, 0 0 0.25em 0em rgba(0, 0, 0, 0.25);
@@ -2527,13 +2539,13 @@
 
 			.box.post .newinfo {
 				position: absolute;
-				width: 5.5em;
+				width: 7.5em;
 				overflow: hidden;
 				background-color: #fff;
 				background-image: url("images/bg02.png");
 				left: -10.5em;
 				top: 0;
-				padding: 1.5em 1em 1.5em 1em;
+				padding: 0.5em 1em 0.5em 1em;
 				border-top-left-radius: 0.4em;
 				border-bottom-left-radius: 0.4em;
 				box-shadow: 0.25em 0 0 0 #fbfbfb, 0 0 0.25em 0em rgba(0, 0, 0, 0.25);
@@ -2543,14 +2555,14 @@
 					position: relative;
 					z-index: 1;
 					font-family: 'Open Sans Condensed', sans-serif;
-					font-weight: 400;
+					font-weight: 500;
 					text-align: center;
 					display: block;
 					font-size: 1.2em;
 					color: #999;
 					border-bottom: solid 1px #ddd;
-					padding: 0 0 1em 0;
-					margin: 0 0 0.75em 0;
+					padding: 0 0 0.25em 0;
+					margin: 0 0 0.1em 0;
 				}
 
 				.box.post .newinfo .newdate {
@@ -2560,22 +2572,22 @@
 					font-weight: 400;
 					text-align: center;
 					display: block;
-					font-size: 1.5em;
+					font-size: 2.5em;
 					color: #999;
 					padding: 0 0 0 0;
-					margin: 0 0  0 0;
+					margin: 0 0 0 0;
 				}
 
         .box.post .info .date .year {
 						display: block;
-						margin: 0.15em 0 0 0;
+						margin: 0.0em 0 0 0;
 						font-size: 1.2em;
 						font-weight: 500;
-						color: red;
+						color: #1b252a;
         }
 					.box.post .info .date .month {
 						display: block;
-						margin: 0.15em 0 0 0;
+						margin: 0.0em 0 0 0;
 						font-size: 1.2em;
 						font-weight: 500;
 						color: #1b252a;
@@ -2583,26 +2595,26 @@
 
 					.box.post .newinfo .newdate .newyear {
 						display: block;
-						margin: 0.25em 0 0 0;
-						font-size: 2.5em;
+						margin: 0.0em 0 0 0;
+						font-size: 0.5em;
 						font-weight: 700;
-						color: red;
+						color: #999;
 					}
 
-				.box.post .info .newinfo .stats {
+				.box.post .info .stats {
 					position: relative;
 					z-index: 1;
 				}
 
 					.box.post .info .stats li {
-						margin: 0.5em 0 0 0;
+						margin: 0 0 0 0.0em;
 					}
 
 						.box.post .info .stats li a {
 							position: relative;
 							display: block;
 							text-align: right;
-							padding: 0 0.5em 0 0.5em;
+							padding: 0 0.95em 0 0.0em;
 						}
 
 							.box.post .info .stats li a:before {
@@ -2610,7 +2622,8 @@
 								left: 0;
 								top: 50%;
 								margin-top: -0.5em;
-								font-size: 16px;
+                margin-left: 0.2em;
+								font-size: 20px;
 								width: 1.5em;
 								text-align: center;
 								opacity: 0.35;
@@ -2650,10 +2663,11 @@
 			.box.post header {
 				padding: 0 0 0 0;
 				margin: 0 0 0 0;
+        font-size: 0.45em;
 			}
 
 				.box.post header > p {
-					font-size: 1.75em;
+					font-size: 2.75em;
 					line-height: 1.5em;
 					position: relative;
 					top: -0.75em;
@@ -2664,35 +2678,60 @@
 				width: 100%;
 				padding: 1em 0 0 0;
 				position: relative;
-				top: -2em;
+				top: -1em;
 			}
 
+			.box.post .newinfo {
+				width: 100%;
+				padding: 0 0 -20px 0;
+				margin: 0 0 -15px 0;
+				position: relative;
+				border-bottom: solid 1px #ddd;
+			}
 				.box.post .info .date {
 					display: inline;
+          margin-right: 0.35em;
 				}
+
+				.box.post .newinfo .newdate {
+					display: inline;
+          margin-right: 0.35em;
+          margin-bottom: 0em;
+          padding-bottom: 0em
+				}
+
+					.box.post .newinfo .newdate .newyear {
+						display: block;
+						margin: 0.0em 0 0 0;
+            padding: 0;
+						font-size: 1.1em;
+						font-weight: 400;
+						color: #999;
+					}
 
 				.box.post .info .stats {
 					display: inline;
 					border-left: solid 1px #ddd;
-					margin-left: 1em;
+					margin-left: 0.35em;
 					padding-left: 1em;
 				}
 
 					.box.post .info .stats li {
 						display: inline-block;
-						margin-left: 0.25em;
+						margin-left: 0.75em;
+            margin-right: -0.35em;
 					}
 
 						.box.post .info .stats li a {
 							display: inline-block;
-							padding-right: 0.5em;
+							padding-right: 0.0em;
 						}
 
 							.box.post .info .stats li a:before {
 								position: relative;
-								width: 1.75em;
+								width: 1.35em;
 								text-align: center;
-								margin-right: 0.35em;
+								margin-right: 0.2em;
 								opacity: 0.35;
 							}
 
@@ -2793,8 +2832,8 @@
 		/* Box */
 
 			.box.post {
-				padding-bottom: 5em;
-				margin-bottom: 6em;
+				padding-bottom: 2em;
+				margin-bottom: 3em;
 			}
 
 				.box.post header > p {
@@ -2812,20 +2851,35 @@
 					padding-top: 0.5em;
 				}
 
+				.box.post .newinfo {
+					width: 100%;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					border-bottom: solid 1px #ddd;
+					padding-top: -2.0em;
+          margin-top: -2.0em;
+				}
 					.box.post .info .date {
 						display: inline;
+            margin-right:0.35em;
 					}
 
+					.box.post .newinfo .newdate {
+						display: inline;
+            margin-right:0.35em;
+					}
 					.box.post .info .stats {
 						display: inline;
 						border-left: solid 1px #ddd;
-						margin-left: 0.75em;
+						margin-left: 1.75em;
 						padding-left: 0.75em;
 					}
 
 						.box.post .info .stats li {
 							display: inline-block;
-							margin-right: 0.85em;
+							margin-right: -0.35em;
+              margin-left: 0.75em;
 						}
 
 							.box.post .info .stats li a {
@@ -2836,7 +2890,7 @@
 								.box.post .info .stats li a:before {
 									position: relative;
 									top: 0.1em;
-									margin-right: 0.5em;
+									margin-right: 0.25em;
 									opacity: 0.35;
 								}
 

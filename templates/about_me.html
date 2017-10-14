@@ -14,3 +14,9 @@
   <p>教育</p>
 </section>
 {% endblock %}
+{% block content_nav %}
+<li><a href="{% url "home" %}">Latest Posts</a></li>
+<li><a href="{% url "archives" %}">Archives</a></li>
+<li><a href="{% url "photography" %}">Photography</a></li>
+<li class="current"><a href="{% url "about_me" %}">About Me</a></li>
+{% endblock%}

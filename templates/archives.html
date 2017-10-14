@@ -3,16 +3,14 @@
 {% load static %}
 {% block content_post %}
   {% for post in post_list%}
-      <article class="box post post-excerpt" style="padding: 0px 0px 40px 0px; margin-bottom: 0px">
-        <header style="padding-bottom: 0px; padding-top: 5px; margin-bottom: 0px">
+      <article class="box post post-excerpt">
           <!--
             Note: Titles and subtitles will wrap automatically when necessary, so don't worry
             if they get too long. You can also remove the <p> entirely if you don't
             need a subtitle.
           -->
-          <a href="{% url "article" id=post.id %}" style="font-size:20px">{{ post.title }}</a>
-        </header>
-        <div class="info" style="padding-bottom: 5px; padding-top: 5px; padding-left: 6px; margin: 0">
+          <a href="{% url "article" id=post.id %}" style="font-size: 20px; text-decoration: none; display: inline-block; padding-top: 9px;">{{ post.title }}</a>
+        <div class="newinfo">
           <!--
             Note: The date should be formatted exactly as it's shown below. In particular, the
             "least significant" characters of the month should be encapsulated in a <span>
@@ -21,8 +19,8 @@
             the entire "date" element.
 
           -->
-          <span class="newdate" style="padding: 0px; margin: 0px">
-            <span class="newyear" style="font-size:16px; font-weight: 700; padding: 0; margin: 0">
+          <span class="newdate">
+            <span class="newyear">
               {{post.date_time.year}}.{% if post.date_time.month < 10 %}0{{post.date_time.month}}{% else %}{{post.date_time.month}}{% endif %}.{% if post.date_time.day < 10 %}0{{post.date_time.day}}{% else %}{{post.date_time.day}}{% endif %}
             </span>
           </span>
@@ -30,3 +28,10 @@
        </article>
   {% endfor %}
 {% endblock %}
+
+{% block content_nav %}
+<li><a href="{% url "home" %}">Latest Posts</a></li>
+<li class="current"><a href="{% url "archives" %}">Archives</a></li>
+<li><a href="{% url "photography" %}">Photography</a></li>
+<li><a href="{% url "about_me" %}">About Me</a></li>
+{% endblock%}

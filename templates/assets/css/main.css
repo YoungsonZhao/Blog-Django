@@ -2098,12 +2098,16 @@
 
 	#nav ul {
 		margin: 0;
+    font-size: 1.35em;
+    font-weight: 700;
 	}
 
 	#nav li {
 		border-top: solid 1px rgba(0, 0, 0, 0.25);
 		box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.075);
 		padding: 0.5em 0 0.5em 0;
+    font-size: 1.35em;
+    font-weight: 700;
 	}
 
 		#nav li:first-child {
@@ -2126,6 +2130,8 @@
 			-webkit-transition: background-color .25s ease-in-out, color .25s ease-in-out;
 			-ms-transition: background-color .25s ease-in-out, color .25s ease-in-out;
 			transition: background-color .25s ease-in-out, color .25s ease-in-out;
+      font-size: 1.35em;
+      font-weight: 700;
 		}
 
 		#nav li.current a {
@@ -2420,7 +2426,7 @@
 					display: block;
 					background-color: #c94663;
 					background-image: url("images/bg01.png");
-					padding: 0.875em 0.25em;
+					padding: 0.375em 0.25em;
 					border-radius: 0.2em;
 					text-align: center;
 					box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.15), 0 0.025em 0.15em 0em rgba(0, 0, 0, 0.25);
