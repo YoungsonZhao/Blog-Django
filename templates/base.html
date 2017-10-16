@@ -99,7 +99,25 @@
 					</ul>
 
 			</div>
-
+<script type='text/javascript'>
+   function addLove(id){
+     var a_id = '#a_love_' + id;
+     var count = $(a_id).html();
+     $.ajax({
+       url:{% url 'addLove' %},
+       type:'POST',
+       dataType: 'json',
+       data:{data:count, post_id:id},
+       success:function(arg){
+         $(a_id).html(arg)
+       },
+       error:function(){
+         alert([count, id]);
+         alert('Sorry, there is something wrong.');
+       }
+     });
+   }
+</script>
 
 	</body>
 </html>

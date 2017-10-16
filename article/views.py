@@ -2,11 +2,12 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
-# from django.http import HttpResponse
+from django.shortcuts import redirect
+from django.http import HttpResponse
 from article.models import Article
-
-
+from django.views.decorators.csrf import csrf_exempt
 import math
+import json
 
 
 # Create your views here.
@@ -29,7 +30,7 @@ def index(request, pg):
         post_list = Article.objects.all()  #获取全部的Article对象
         post_num = len(post_list)+30
         if post_num < 3*(pg-1)+1:   # 处理超页的情况
-            pg = pg -1
+            pg = pg - 1
         if pg < 1:    # 处理页码为零的情况
             pg=1
         page_num = int(math.ceil(post_num/3.0))
@@ -67,3 +68,20 @@ def photography(request) :
 
 def about_me(request) :
         return render(request, 'about_me.html')
+
+
+
+def love(request, id, path):
+        return redirect(path)
+
+
+@csrf_exempt
+def addLove(request):
+        if request.method =='POST':
+            love_count = request.POST.get('data')
+            id = request.POST.get('post_id')
+            love_count = int(love_count) + 1
+            post = Article.objects.get(pk=int(id))
+            post.lovecount += 1
+            post.save()
+            return HttpResponse(json.dumps(love_count))

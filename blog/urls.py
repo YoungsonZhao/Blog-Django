@@ -15,17 +15,19 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from article.views import home, article, test, index, archives, photography, about_me
+from article.views import home, article, test, index, archives, photography, about_me, love, addLove
 
 urlpatterns = [
-    url(r'^$', home, name='home'),
+    # url(r'^$', home, name='home'),
     url(r'^admin/', admin.site.urls),
-    url(r'^home', home, name='home'),
-    url(r'^index', home, name='home'),
-    url(r'^archives', archives, name='archives'),
-    url(r'^photography', photography, name='photography'),
-    url(r'^about_me', about_me, name='about_me'),
-    url(r'^index?pg=(?P<pg>\d+)/$', index, name='index'),
-    url(r'^article?id=(?P<id>\d+)/$', article, name='article'),
+    url(r'^home/$', home, name='home'),
+    url(r'^index-pg=(?P<pg>\d+)/$', index, name='index'),
+    url(r'^index/$', home, name='home'),
+    url(r'^archives/$', archives, name='archives'),
+    url(r'^photography/$', photography, name='photography'),
+    url(r'^about_me/$', about_me, name='about_me'),
+    url(r'^Article-id=(?P<id>\d+)/$', article, name='article'),
     url(r'^test', test, name = 'test'),
+    url(r'^love-id=(?P<id>\d+)/path=(?P<path>(.*))/$', love, name='love'),
+    url(r'^addLove/$', addLove, name='addLove'),
 ]
