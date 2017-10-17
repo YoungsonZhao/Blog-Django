@@ -25,7 +25,7 @@ SECRET_KEY = 'f^8_f+b4u(66&t7b%*kgcjx=%@o+tj%o%c8w69t*vztfb!$z5l'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['172.18.119.186', '45.77.36.117', '127.0.0.1', u'localhost']
+ALLOWED_HOSTS = ['172.18.119.186', '45.77.36.117', '127.0.0.1', u'localhost', 'www.wecamo.com', 'www.zhaoyongsheng.com']
 
 
 # Application definition
@@ -120,7 +120,7 @@ SECURE_CONTENT_TYPE_NOSNIFF = True
 SECURE_BROWSER_XSS_FILTER = True
 # SECURE_SSL_REDIRECT = True
 # SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
 FRAME_OPTIONS = 'DENY'
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_HSTS_PRELOAD = True
@@ -129,4 +129,7 @@ SECURE_HSTS_PRELOAD = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = ( os.path.join('static'), )
+STATICFILES_DIRS = (os.path.join('static'),)
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, "media").replace('\\', '/')

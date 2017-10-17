@@ -7,11 +7,11 @@
 <html>
   {% load static %}
 		<!-- Scripts -->
-  <script src="{% static "assets/js/jquery.min.js" %}"></script>
-  <script src="{% static "assets/js/skel.min.js" %}"></script>
-  <script src="{% static "assets/js/util.js" %}"></script>
+  <script type="text/javascript" async  src="{% static "assets/js/jquery.min.js" %}"></script>
+  <script type="text/javascript" async  src="{% static "assets/js/skel.min.js" %}"></script>
+  <script type="text/javascript" async  src="{% static "assets/js/util.js" %}"></script>
   <!--[if lte IE 8]><script src="{% static "assets/js/ie/respond.min.js" %}"></script><![endif]-->
-  <script src="{% static "assets/js/main.js" %}"></script>
+  <script type="text/javascript" async  src="{% static "assets/js/main.js" %}"></script>
 	<head>
 		<title>ZhaoYongsheng's Blog</title>
 		<meta charset="utf-8" />
@@ -112,8 +112,26 @@
          $(a_id).html(arg)
        },
        error:function(){
-         alert([count, id]);
-         alert('Sorry, there is something wrong.');
+         alert('Sorry, there is something wrong.')
+       }
+     });
+   }
+</script>
+
+<script type='text/javascript'>
+   function addLove_photo(id){
+     var a_id = '#a_love_' + id;
+     var count = $(a_id).html();
+     $.ajax({
+       url:{% url 'addLove_photo' %},
+       type:'POST',
+       dataType: 'json',
+       data:{data:count, photo_id:id},
+       success:function(arg){
+         $(a_id).html(arg)
+       },
+       error:function(){
+         alert('Sorry, there is something wrong.')
        }
      });
    }

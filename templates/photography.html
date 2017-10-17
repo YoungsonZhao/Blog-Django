@@ -1,0 +1,76 @@
+	{% extends "base.html" %}
+<!-- post -->
+{% load static %}
+{% block content_post %}
+{% for photo in photo_list %}
+    <article class="box post post-excerpt">
+      <header>
+        <!--
+          Note: Titles and subtitles will wrap automatically when necessary, so don't worry
+          if they get too long. You can also remove the <p> entirely if you don't
+          need a subtitle.
+        -->
+        <p>{{ photo.category }}</p>
+      </header>
+      <div class="info">
+        <!--
+          Note: The date should be formatted exactly as it's shown below. In particular, the
+          "least significant" characters of the month should be encapsulated in a <span>
+          element to denote what gets dropped in 1200px mode (eg. the "uary" in "January").
+          Oh, and if you don't need a date for a particular page or photo you can simply delete
+          the entire "date" element.
+
+        -->
+        <span class="date">
+          <span class="year">{{photo.date_time.year}}</span>
+          {% if photo.date_time.month == 1 %}
+              <span class="month">Jan.</span>
+          {% elif photo.date_time.month == 2 %}
+              <span class="month">Feb.</span>
+          {% elif photo.date_time.month == 3 %}
+              <span class="month">Mar.</span>
+          {% elif photo.date_time.month == 4 %}
+              <span class="month">Apr.</span>
+          {% elif photo.date_time.month == 5 %}
+              <span class="month">May.</span>
+          {% elif photo.date_time.month == 6 %}
+              <span class="month">Jun.</span>
+          {% elif photo.date_time.month == 7 %}
+              <span class="month">Jul.</span>
+          {% elif photo.date_time.month == 8 %}
+              <span class="month">Aug.</span>
+          {% elif photo.date_time.month == 9 %}
+              <span class="month">Sep.</span>
+          {% elif photo.date_time.month == 10 %}
+              <span class="month">Oct.</span>
+          {% elif photo.date_time.month == 11 %}
+              <span class="month">Mov.</span>
+          {% else %}
+              <span class="month">Dec.</span>
+          {% endif %}
+          {% if photo.date_time.day < 10 %}
+              <span class="month">0{{photo.date_time.day}}</span>
+          {% else %}
+              <span class="month">{{photo.date_time.day}}</span>
+          {% endif %}
+
+        </span>
+
+        <ul class="stats" style="padding:0em; margin:0em">
+          <li><a href="#" class="icon fa-comment">16</a></li>
+          <li><a href="javascript:void(0)" class="icon fa-heart" onclick="addLove_photo({{photo.id}})" id="a_love_{{photo.id}}" >{{ photo.lovecount }}</a></li>
+          <li><a href="{% url "love" id=photo.id path=request.path %}" class="icon fa-heart">{{ request.path }}</a></li>
+        </ul>
+      </div>
+      <a href="#" class="image featured"><img src="{{ photo.image.url }}" alt="" /></a>
+      {{ photo.abstract | safe }}
+    </article>
+{% endfor %}
+{% endblock %}
+
+{% block content_nav %}
+<li><a href="{% url "home" %}">Latest posts</a></li>
+<li><a href="{% url "archives" %}">Archives</a></li>
+<li class="current"><a href="{% url "photography" %}">Photography</a></li>
+<li><a href="{% url "about_me" %}">About Me</a></li>
+{% endblock%}

@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from article.views import home, article, test, index, archives, photography, about_me, love, addLove
+from django.conf.urls.static import static
+from django.conf import settings
+from article.views import home, article, test, index, archives, photography, about_me, love, addLove, addLove_photo
 
 urlpatterns = [
     # url(r'^$', home, name='home'),
@@ -27,7 +29,8 @@ urlpatterns = [
     url(r'^photography/$', photography, name='photography'),
     url(r'^about_me/$', about_me, name='about_me'),
     url(r'^Article-id=(?P<id>\d+)/$', article, name='article'),
-    url(r'^test', test, name = 'test'),
+    url(r'^test', test, name='test'),
     url(r'^love-id=(?P<id>\d+)/path=(?P<path>(.*))/$', love, name='love'),
     url(r'^addLove/$', addLove, name='addLove'),
-]
+    url(r'^addLove_photo/$', addLove_photo, name='addLove_photo'),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

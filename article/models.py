@@ -25,6 +25,7 @@ class Photo(models.Model):
     lovecount = models.IntegerField(default=0)  # 照片点赞数量
     date_time = models.DateTimeField(auto_now_add=True)  # 照片日期
     abstract = models.TextField(blank=True, null=True)  # 照片简介
+    image = models.ImageField(upload_to='photos/', default="")
 
     def __unicode__(self):
         return self.abstract
