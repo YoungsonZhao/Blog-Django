@@ -20,7 +20,7 @@ from django.conf import settings
 from article.views import home, article, test, index, archives, photography, about_me, love, addLove, addLove_photo
 
 urlpatterns = [
-    # url(r'^$', home, name='home'),
+    url(r'^$', home, name='home'),
     url(r'^admin/', admin.site.urls),
     url(r'^home/$', home, name='home'),
     url(r'^index-pg=(?P<pg>\d+)/$', index, name='index'),

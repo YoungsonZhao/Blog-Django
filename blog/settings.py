@@ -25,7 +25,7 @@ SECRET_KEY = 'f^8_f+b4u(66&t7b%*kgcjx=%@o+tj%o%c8w69t*vztfb!$z5l'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['172.18.119.186', '45.77.36.117', '127.0.0.1', u'localhost', 'www.wecamo.com', 'www.zhaoyongsheng.com']
+ALLOWED_HOSTS = ['172.18.119.186', '45.77.36.117', '127.0.0.1', u'localhost', u'www.wecamo.com', u'www.zhaoyongsheng.com', u'blog.zhaoyongsheng.com', '45.32.103.95']
 
 
 # Application definition
