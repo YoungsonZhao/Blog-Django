@@ -1980,69 +1980,98 @@
 		color: #fff !important;
 	}
 
-        .photo{
-         margin-top:25px;
-         margin-left: auto;
-         margin-right: auto;
-        }
-        .imgbox_9{margin: 0px; list-style-type:none;}
-        .imgbox_9:after{
-         content: ".";
-         display: block;
-         line-height: 0;
-         width:0;
-         height: 0;
-         clear: both;
-         visibility: hidden;
-         overflow: hidden;
-        } 
-        .imgbox_9 li{
-         float:left;
-         width:30%;
-         margin: 0px;
-        }
-        .imgbox_9 li a,.imgbox_9 li a:visited{
-         display:block;
-         text-align: center;
-         margin-left: 2px;
-         margin-right: 3px;
-         margin-top: -3px;
-         margin-bottom: 0px;
-         position: relative;
-         z-index: 1;
-        }
-        .imgbox_9 li a:hover{z-index: 2;}
-
-        .imgbox_4{margin-left: 0px; margin-right: 0px; margin-top: 0px;margin-bottom: 0px; list-style-type:none;}
-        .imgbox_4:after{
-         content: ".";
-         display: block;
-         line-height: 0;
-         width:0;
-         height: 0;
-         clear: both;
-         visibility: hidden;
-         overflow: hidden;
-        } 
-        .imgbox_4 li{
-         float:left;
-         width:45%;
-        }
-        .imgbox_4 li a,.imgbox_9 li a:visited{
-         display:block;
-         text-align: center;
-         margin-left: 2px;
-         margin-right: 3px;
-         margin-top: -3px;
-         margin-bottom: 0px;
-         position: relative;
-         z-index: 1;
-        }
-        .imgbox_4 li a:hover{border-color: #f00;z-index: 2;}
 	.box.post {
 		position: relative;
 	}
 
+        .box.post .photo{
+         margin-top:25px;
+         margin-left: auto;
+         margin-right: auto;
+        }
+        .box.post .photo .imgbox_9{margin: 0px; list-style-type:none;}
+        .box.post .photo .imgbox_9:after{
+         content: ".";
+         display: block;
+         line-height: 0;
+         width:0;
+         height: 0;
+         clear: both;
+         visibility: hidden;
+         overflow: hidden;
+        } 
+        .box.post .photo .imgbox_9 li{
+         float:left;
+         width:30%;
+         margin: 0px;
+        }
+
+        .box.post .photo .imgbox_9 li a,.imgbox_9 li a:visited{
+         display:block;
+         text-align: center;
+         margin-left: 2px;
+         margin-right: 3px;
+         margin-top: -3px;
+         margin-bottom: 0px;
+         position: relative;
+         z-index: 1;
+        }
+        .box.post .photo .imgbox_9 li a:hover{z-index: 2;}
+
+        .box.post .photo .imgbox_4{margin-left: 0px; margin-right: 0px; margin-top: 0px;margin-bottom: 0px; list-style-type:none;}
+        .box.post .photo .imgbox_4:after{
+         content: ".";
+         display: block;
+         line-height: 0;
+         width:0;
+         height: 0;
+         clear: both;
+         visibility: hidden;
+         overflow: hidden;
+        } 
+        .box.post .photo .imgbox_4 li{
+         float:left;
+         width:45%;
+        }
+        .box.post .photo .imgbox_4 li a,.imgbox_4 li a:visited{
+         display:block;
+         text-align: center;
+         margin-left: 2px;
+         margin-right: 3px;
+         margin-top: -3px;
+         margin-bottom: 0px;
+         position: relative;
+         z-index: 1;
+        }
+        .box.post .photo .imgbox_4 li a:hover{border-color: #f00;z-index: 2;}
+
+        .box.post .photo .imgbox_1{margin-left: 0px; margin-right: 0px; margin-top: 0px;margin-bottom: 0px; list-style-type:none;}
+        .box.post .photo .imgbox_1:after{
+         content: ".";
+         display: inline;
+         line-height: 0;
+         width:0;
+         height: 0;
+         clear: both;
+         visibility: hidden;
+         overflow: hidden;
+        } 
+        .box.post .photo .imgbox_1 li{
+         float:left;
+         width:90%;
+        }
+        .box.post .photo .imgbox_1 li a,.imgbox_1 li a:visited{
+         display:inline;
+         width:90%;
+         text-align: center;
+         margin-left: 2px;
+         margin-right: 3px;
+         margin-top: -3px;
+         margin-bottom: 0px;
+         position: relative;
+         z-index: 1;
+        }
+        .box.post .photo .imgbox_1 li a:hover{border-color: #f00;z-index: 2;}
 		.box.post .info .newinfo .stats {
 			margin: 0;
 			cursor: default;
@@ -3085,3 +3114,4 @@
 			}
 
 	}
+

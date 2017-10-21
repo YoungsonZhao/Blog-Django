@@ -95,3 +95,12 @@ def addLove_photo(request):
             photo.lovecount += 1
             photo.save()
             return HttpResponse(json.dumps(love_count))
+
+
+@csrf_exempt
+def photo_info(request):
+        if request.method == 'POST':
+            id = request.POST.get('photo_id')
+            state = request.POST.get('label')
+            print {'label': state, 'photo_id': id}
+            return HttpResponse(json.dumps({'label': state, 'photo_id': id}))

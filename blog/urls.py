@@ -17,7 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.conf.urls.static import static
 from django.conf import settings
-from article.views import home, article, test, index, archives, photography, about_me, love, addLove, addLove_photo
+from article.views import home, article, test, index, archives, photography, about_me, love, addLove, addLove_photo, photo_info
 
 urlpatterns = [
     url(r'^$', home, name='home'),
@@ -33,4 +33,5 @@ urlpatterns = [
     url(r'^love-id=(?P<id>\d+)/path=(?P<path>(.*))/$', love, name='love'),
     url(r'^addLove/$', addLove, name='addLove'),
     url(r'^addLove_photo/$', addLove_photo, name='addLove_photo'),
+    url(r'^photo_info/$', photo_info, name='photo_info'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

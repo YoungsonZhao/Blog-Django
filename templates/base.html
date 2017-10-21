@@ -86,8 +86,8 @@
 				<!-- Copyright -->
 					<ul id="copyright">
 						<li>Copyright &copy; 2017</li>
-            <li>ZHAO YONGSHENG</li>
-            <li>ALL RIGHTS RESERVED</li>
+            <li>Zhao Yongsheng</li>
+            <li>All Rights Reserved.</li>
 					</ul>
 
 			</div>
@@ -128,6 +128,32 @@
      });
    }
 </script>
-
+<script type='text/javascript'>
+   function photo_info(id){
+     var a_id = '#p_info_' + id;
+     var content = $(a_id).html();
+     $.ajax({
+       url:{% url 'photo_info' %},
+       type:'POST',
+       dataType: 'json',
+       data:{label:content, photo_id:id},
+       success:function(arg){
+          if ($.trim(arg.label) == "Show Detailed Photo Info.")
+         {
+            $(a_id).html("Hide Detailed Photo Info.");
+           $("<div id='p_info_group'><p>This is a test.</p><p>THis is a new test.</p></div>").insertAfter(a_id);
+         }
+          else
+         {
+           $('#p_info_group').empty();
+           $(a_id).html("Show Detailed Photo Info.");
+         }
+       },
+       error:function(){
+         alert('Sorry, there is something wrong.');
+       }
+     });
+   }
+</script>
 	</body>
 </html>
