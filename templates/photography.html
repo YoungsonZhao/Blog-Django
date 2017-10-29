@@ -1,4 +1,4 @@
-	{% extends "base.html" %}
+{% extends "base.html" %}
 <!-- post -->
 {% load static %}
 {% block content_post %}
@@ -37,7 +37,6 @@
           {% else %}
               <span class="month">{{photo.date_time.day}}</span>
           {% endif %}
-
         </span>
 
         <ul class="stats" style="padding:0em; margin:0em">
@@ -45,34 +44,33 @@
           <li><a href="javascript:void(0)" class="icon fa-heart" onclick="addLove_photo({{photo.id}})" id="a_love_{{photo.id}}" >{{ photo.lovecount }}</a></li>
         </ul>
       </div>
-<div class="photo">
- <ul class="imgbox_9">
-  <li><a href="#" ><img src="{% static "images/pic01.jpg" %}" width=100%/></a></li>
-  <li><a href="#" ><img src="{% static "images/pic01.jpg" %}" width=100%/></a></li>
-  <li><a href="#" ><img src="{% static "images/pic01.jpg" %}" width=100%/></a></li>
-  <li><a href="#" ><img src="{% static "images/pic01.jpg" %}" width=100%/></a></li>
-  <li><a href="#" ><img src="{% static "images/pic01.jpg" %}" width=100%/></a></li>
-  <li><a href="#" ><img src="{% static "images/pic01.jpg" %}" width=100%/></a></li>
-  <li><a href="#" ><img src="{% static "images/pic01.jpg" %}" width=100%/></a></li>
-  <li><a href="#" ><img src="{% static "images/pic01.jpg" %}" width=100%/></a></li>
-  <li><a href="#" ><img src="{% static "images/pic01.jpg" %}" width=100%/></a></li>
- </ul>
- <a style="text-decoration: none; font-size: 12px; padding-left: 4px;" href="javascript:void(0)" onclick="photo_info({{photo.id}})" id="p_info_{{photo.id}}">Show Detailed Photo Info.</a>
-</div>
+      <div class="photo">
+       <ul class="imgbox_9">
+        <li><a href="#" ><img src="{% static "images/pic01.jpg" %}" width=100%/></a></li>
+        <li><a href="#" ><img src="{% static "images/pic01.jpg" %}" width=100%/></a></li>
+        <li><a href="#" ><img src="{% static "images/pic01.jpg" %}" width=100%/></a></li>
+        <li><a href="#" ><img src="{% static "images/pic01.jpg" %}" width=100%/></a></li>
+        <li><a href="#" ><img src="{% static "images/pic01.jpg" %}" width=100%/></a></li>
+        <li><a href="#" ><img src="{% static "images/pic01.jpg" %}" width=100%/></a></li>
+        <li><a href="#" ><img src="{% static "images/pic01.jpg" %}" width=100%/></a></li>
+        <li><a href="#" ><img src="{% static "images/pic01.jpg" %}" width=100%/></a></li>
+        <li><a href="#" ><img src="{% static "images/pic01.jpg" %}" width=100%/></a></li>
+       </ul>
+       <a style="text-decoration: none; font-size: 12px; padding-left: 4px;" href="javascript:void(0)" onclick="photo_info({{photo.id}})" id="p_info_{{photo.id}}">Show Detailed Photo Info.</a>
+      </div>
 
-<div class="photo">
- <ul class="imgbox_4">
-  <li><a href="#" ><img src="{% static "images/pic02.jpg" %}" width=100%/></a></li>
-  <li><a href="#" ><img src="{% static "images/pic02.jpg" %}" width=100%/></a></li>
-  <li><a href="#" ><img src="{% static "images/pic02.jpg" %}" width=100%/></a></li>
-  <li><a href="#" ><img src="{% static "images/pic02.jpg" %}" width=100%/></a></li>
- </ul>
-</div>
-<div class="photo">
- <ul class="imgbox_1">
-   <li><a href="#" ><img src="{{ photo.image.url }}" width=89.5%, style="margin-left: 2px;"/></a></li>
- </ul>
-</div>
+      <div class="photo">
+       <ul class="imgbox_4">
+        <li><a href="#" ><img src="{% static "images/pic02.jpg" %}" width=100%/></a></li>
+        <li><a href="#" ><img src="{% static "images/pic02.jpg" %}" width=100%/></a></li>
+        <li><a href="#" ><img src="{% static "images/pic02.jpg" %}" width=100%/></a></li>
+        <li><a href="#" ><img src="{% static "images/pic02.jpg" %}" width=100%/></a></li>
+       </ul>
+      </div>
+
+      <div class="imgbox_1">
+         <a href="#" ><img src="{{ photo.image.url }}" width=89.5%, style="display: block; margin-left: 2px;"/></a>
+      </div>
       {{ photo.abstract | safe }}
     </article>
 {% endfor %}

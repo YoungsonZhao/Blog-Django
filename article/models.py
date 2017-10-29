@@ -12,6 +12,7 @@ class Article(models.Model):
     date_time = models.DateTimeField(auto_now_add=True)  # 博客日期
     abstract = models.TextField(blank=True, null=True)  # 博客文章简介
     content = models.TextField(blank=True, null=True)  # 博客文章正文
+    cover = models.CharField(max_length=75, blank=True)  # 博客封面
 
     def __unicode__(self):
         return self.title

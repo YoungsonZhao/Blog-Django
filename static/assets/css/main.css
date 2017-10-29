@@ -1632,6 +1632,10 @@
 		margin-bottom: 1em;
 	}
 
+  p {
+    text-align: justify;
+  }
+
 /* Table */
 
 	table {
@@ -1721,6 +1725,7 @@
 			display: block;
 			margin-top: 1em;
 			color: #999;
+      text-align: justify;
 		}
 
 	section, article {
@@ -1984,8 +1989,12 @@
 		position: relative;
 	}
 
+  .box.post p{
+    text-align: justify;
+  }
         .box.post .photo{
-         margin-top:25px;
+         position: relative;
+         margin-top:0px;
          margin-left: auto;
          margin-right: auto;
         }
@@ -2045,23 +2054,22 @@
         }
         .box.post .photo .imgbox_4 li a:hover{border-color: #f00;z-index: 2;}
 
-        .box.post .photo .imgbox_1{margin-left: 0px; margin-right: 0px; margin-top: 0px;margin-bottom: 0px; list-style-type:none;}
-        .box.post .photo .imgbox_1:after{
+        .box.post .imgbox_1{display: block; width: 90%; margin-left: 0px; margin-right: 0px; margin-top: 0px;margin-bottom: 0px; list-style-type:none;}
+        .box.post .imgbox_1:after{
          content: ".";
-         display: inline;
+         display: block;
          line-height: 0;
-         width:0;
-         height: 0;
          clear: both;
          visibility: hidden;
          overflow: hidden;
         } 
-        .box.post .photo .imgbox_1 li{
+        .box.post .imgbox_1 li{
          float:left;
+         display: block;
          width:90%;
         }
-        .box.post .photo .imgbox_1 li a,.imgbox_1 li a:visited{
-         display:inline;
+        .box.post .imgbox_1 li a,.imgbox_1 li a:visited{
+         display:block;
          width:90%;
          text-align: center;
          margin-left: 2px;
@@ -2071,7 +2079,7 @@
          position: relative;
          z-index: 1;
         }
-        .box.post .photo .imgbox_1 li a:hover{border-color: #f00;z-index: 2;}
+        .box.post .imgbox_1 li a:hover{border-color: #f00;z-index: 2;}
 		.box.post .info .newinfo .stats {
 			margin: 0;
 			cursor: default;
@@ -2214,7 +2222,7 @@
 
 		#nav li a {
 			display: block;
-			padding: 0.4em 1em 0.4em 1em;
+			padding: 0.4em 0.75em 0.4em 0.75em;
 			text-decoration: none;
 			border-radius: 0.4em;
 			outline: 0;
@@ -2222,7 +2230,7 @@
 			-webkit-transition: background-color .25s ease-in-out, color .25s ease-in-out;
 			-ms-transition: background-color .25s ease-in-out, color .25s ease-in-out;
 			transition: background-color .25s ease-in-out, color .25s ease-in-out;
-      font-size: 1.2em;
+      font-size: 1.15em;
       font-weight: 700;
 		}
 
@@ -2231,7 +2239,7 @@
 			background-color: rgba(0, 0, 0, 0.15) !important;
 			box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0.25em 0 rgba(0, 0, 0, 0.25);
 			font-weight: 900;
-      font-size: 1.2em;
+      font-size: 1.15em;
 			color: #fff;
 		}
 
@@ -2429,7 +2437,11 @@
 			h3, h4, h5, h6 {
 				font-size: 1em;
 			}
-
+       
+      p {
+        text-align: justify;
+        
+      }
 		/* Button */
 
 			input[type="button"],
@@ -2497,6 +2509,10 @@
 
 		/* Box */
 
+      .box.post p{
+        text-align: justify;
+        text-indent: 1em;
+      }
 			.box.post .info .newinfo .stats li a {
 				border-radius: 0.4em;
 				opacity: 0.5;
@@ -2596,11 +2612,18 @@
 
 		/* Box */
 
+      p {
+        text-align: justify;
+        
+      }
 			.box.post h2 {
 				font-size: 3.25em;
 				line-height: 1.25em;
 			}
 
+      .box.post p {
+        text-align: justify;
+      }
 			.box.post header {
 				padding: 2.75em 0 0 0;
 				margin: 0 0 1em 0;
@@ -2613,6 +2636,7 @@
 					position: relative;
 					top: -0.65em;
 					margin-bottom: -0em;
+          text-align: justify;
 				}
         .box.post .info {
                 position: absolute;
@@ -2763,6 +2787,7 @@
 					position: relative;
 					top: -0.75em;
 					margin-bottom: -0.75em;
+          text-align: justify;
 				}
 
 			.box.post .info {
@@ -2931,6 +2956,7 @@
 					font-size: 1em;
 					font-family: 'Source Sans Pro', sans-serif;
 					line-height: 1.5em;
+          text-align: justify;
 				}
 
 				.box.post .info {
