@@ -1,6 +1,7 @@
 	{% extends "base.html" %}
 <!-- Post -->
 {% load static %}
+{% load img_src %}
 {% block content_post %}
   <article class="box post post-excerpt">
     <header>
@@ -50,7 +51,7 @@
     <a href="#" class="image featured"><img src="{% static post.cover %}" alt="" /></a>
     <h3>Abstract</h3>
     <p>{{ post.abstract | safe }}</p>
-    {{ post.content | safe }}
+    {{ post.content |img_src | safe}}
   </article>
 {% endblock %}
 
