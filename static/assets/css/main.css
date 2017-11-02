@@ -1769,7 +1769,7 @@
 
 		.imagecover{
 			display: block;
-			width: 400px;
+			width: 35%;
       text-align: center;
 			margin: 0 auto;
 		}
@@ -2005,6 +2005,7 @@
 
   .box.post p{
     text-align: justify;
+    text-indent: 1em;
   }
         .box.post .photo{
          position: relative;
@@ -2537,6 +2538,15 @@
         text-align: justify;
         text-indent: 1em;
       }
+      .box.post header > p {
+        font-size: 2.25em;
+        line-height: 1.5em;
+        position: relative;
+        top: -0.65em;
+        margin-bottom: -0em;
+        margin-left: -1em;
+        text-align: justify;
+      }
 			.box.post .info .newinfo .stats li a {
 				border-radius: 0.4em;
 				opacity: 0.5;
@@ -2636,18 +2646,15 @@
 
 		/* Box */
 
-      p {
+      .box.post p{
         text-align: justify;
-        
+        text-indent: 1em;
       }
 			.box.post h2 {
 				font-size: 3.25em;
 				line-height: 1.25em;
 			}
 
-      .box.post p {
-        text-align: justify;
-      }
 			.box.post header {
 				padding: 2.75em 0 0 0;
 				margin: 0 0 1em 0;
@@ -2660,6 +2667,7 @@
 					position: relative;
 					top: -0.65em;
 					margin-bottom: -0em;
+          margin-left: -1em;
           text-align: justify;
 				}
         .box.post .info {
@@ -2794,6 +2802,10 @@
 
 		/* Box */
 
+      .box.post p {
+        text-align: justify;
+        text-indent: 1em;
+      }
 			.box.post h2 {
 				font-size: 3.25em;
 				line-height: 1.25em;
@@ -2811,6 +2823,7 @@
 					position: relative;
 					top: -0.75em;
 					margin-bottom: -0.75em;
+          margin-left: -1em;
           text-align: justify;
 				}
 
@@ -2974,6 +2987,10 @@
 
 		/* Box */
 
+      .box.post p {
+        text-align: justify;
+        text-indent: 1em;
+      }
 			.box.post {
 				padding-bottom: 2em;
 				margin-bottom: 3em;
@@ -2984,6 +3001,7 @@
 					font-family: 'Source Sans Pro', sans-serif;
 					line-height: 1.5em;
           text-align: justify;
+          margin-left: -1em;
 				}
 
 				.box.post .info {
