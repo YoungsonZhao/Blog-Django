@@ -48,7 +48,7 @@
           <li><a href="javascript:void(0)" class="icon fa-heart" onclick="addLove({{post.id}})" id="a_love_{{post.id}}" >{{ post.lovecount }}</a></li>
         </ul>
     </div>
-    <a href="#" class="image featured"><img src="{% static post.cover %}" alt="" /></a>
+    <img class="imagecover" src="{% static post.cover %}" alt="" />
     <h3>Abstract</h3>
     <p>{{ post.abstract | safe }}</p>
     {{ post.content |img_src | safe}}

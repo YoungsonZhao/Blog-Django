@@ -1762,8 +1762,16 @@
 
 		.image.featured {
 			display: block;
-			width: 100%;
+			width: 500px;
+      text-align: center;
 			margin: 0 0 2em 0;
+		}
+
+		.imagecover{
+			display: block;
+			width: 400px;
+      text-align: center;
+			margin: 0 auto;
 		}
 
 		.image.left {

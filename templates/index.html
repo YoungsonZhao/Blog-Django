@@ -50,7 +50,7 @@
           <!--<li><a href="{% url "love" id=post.id path=request.path %}" class="icon fa-heart">{{ request.path }}</a></li>-->
         </ul>
       </div>
-      <a href="#" class="image featured"><img src="{% static post.cover %}" max-width=600px alt="" /></a>
+      <img class="imagecover" src="{% static post.cover %}" alt="" />
       <p>{{ post.abstract | safe }}</p>
     </article>
 {% endfor %}
