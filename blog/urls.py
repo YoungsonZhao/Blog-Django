@@ -17,7 +17,14 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.conf.urls.static import static
 from django.conf import settings
+from django.contrib.sitemaps.views import sitemap
 from article.views import home, article, test, index, archives, photography, about_me, love, addLove, addLove_photo, photo_info
+from article.sitemap import BlogSitemap
+
+sitemaps = {
+    'blog': BlogSitemap
+}
+
 
 urlpatterns = [
     url(r'^$', home, name='home'),
@@ -34,4 +41,5 @@ urlpatterns = [
     url(r'^addLove/$', addLove, name='addLove'),
     url(r'^addLove_photo/$', addLove_photo, name='addLove_photo'),
     url(r'^photo_info/$', photo_info, name='photo_info'),
+    url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

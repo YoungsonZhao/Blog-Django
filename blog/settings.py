@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'f^8_f+b4u(66&t7b%*kgcjx=%@o+tj%o%c8w69t*vztfb!$z5l'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['172.18.119.186', '45.77.173.5', '127.0.0.1', u'localhost', u'www.wecamo.com', u'www.zhaoyongsheng.com', u'blog.zhaoyongsheng.com']
 
@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
     'article',
 ]
 
@@ -133,3 +135,5 @@ STATICFILES_DIRS = (os.path.join('static'),)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media").replace('\\', '/')
+
+SITE_ID = 1

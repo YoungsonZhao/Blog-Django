@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from django.core.urlresolvers import reverse
 
 
 # Create your models here.
@@ -16,6 +17,9 @@ class Article(models.Model):
 
     def __unicode__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse('article', kwargs={'id': self.pk})
 
     class Meta:  # 按时间下降排序
         ordering = ['-date_time']
