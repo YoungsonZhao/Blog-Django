@@ -19,10 +19,11 @@ from django.conf.urls.static import static
 from django.conf import settings
 from django.contrib.sitemaps.views import sitemap
 from article.views import home, article, test, index, archives, photography, about_me, love, addLove, addLove_photo, photo_info
-from article.sitemap import BlogSitemap
+from article.sitemap import BlogSitemap, StaticSitemap
 
 sitemaps = {
-    'blog': BlogSitemap
+    'blog': BlogSitemap,
+    'static': StaticSitemap
 }
 
 

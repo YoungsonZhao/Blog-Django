@@ -9,6 +9,8 @@
 #
 #======================================================================
 from django.contrib.sitemaps import Sitemap
+from datetime import datetime
+from django.core.urlresolvers import reverse
 from article.models import Article
 
 class BlogSitemap(Sitemap):
@@ -21,4 +23,19 @@ class BlogSitemap(Sitemap):
     def lastmod(self, item):
         return item.date_time
 
+class StaticSitemap(Sitemap):
+    lastmod = datetime.today().date()
+    changefreq = 'weekly'
+    priority = 0.5
 
+    def items(self):
+        static_urls = [
+            'home',
+            'archives',
+            'photography',
+            'about_me'
+        ]
+        return static_urls
+
+    def location(self, url):
+        return reverse(url)
