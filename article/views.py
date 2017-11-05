@@ -47,6 +47,7 @@ def index(request, pg):
 
 def article(request, id):
         post = Article.objects.get(pk=id)
+        post.increase_views()
         return render(request, 'article.html', {'post': post})
 
 
