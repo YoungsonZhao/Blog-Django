@@ -36,7 +36,7 @@ urlpatterns = [
     url(r'^archives/$', archives, name='archives'),
     url(r'^photography/$', photography, name='photography'),
     url(r'^about_me/$', about_me, name='about_me'),
-    url(r'^article/id=(?P<id>\d+)/$', article, name='article'),
+    url(r'^Article-id=(?P<id>\d+)/$', article, name='article'),
     url(r'^test', test, name='test'),
     url(r'^love-id=(?P<id>\d+)/path=(?P<path>(.*))/$', love, name='love'),
     url(r'^addLove/$', addLove, name='addLove'),
