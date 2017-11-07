@@ -2020,6 +2020,11 @@
           font-weight: 700;
           margin-bottom: 15px;
         }
+
+        .box.post .list{
+          list-style:disc inside;
+        }
+
         .box.post .photo .imgbox_9{margin: 0px; list-style-type:none;}
         .box.post .photo .imgbox_9:after{
          content: ".";
