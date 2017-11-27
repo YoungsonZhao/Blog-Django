@@ -13,7 +13,7 @@ import json
 # Create your views here.
 def home(request):
         post_list = Article.objects.all()  # 获取全部的Article对象
-        post_num = len(post_list)+30
+        post_num = len(post_list)
         page_num = int(math.ceil(post_num/3.0))
         if page_num > 4:
             page_max = page_num     # 两种模式，一种小于等于4页；一种大于4页
@@ -28,7 +28,7 @@ def home(request):
 def index(request, pg):
         pg = int(pg)
         post_list = Article.objects.all()  # 获取全部的Article对象
-        post_num = len(post_list)+30
+        post_num = len(post_list)
         if post_num < 3*(pg-1)+1:   # 处理超页的情况
             pg = pg - 1
         if pg < 1:    # 处理页码为零的情况
