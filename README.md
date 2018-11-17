@@ -48,4 +48,5 @@ chmod g+w db.sqlite3
 chmod g+w /static
 chmod g+w /media
 service apache2 restart
+python manage.py collectstatic
 '''
