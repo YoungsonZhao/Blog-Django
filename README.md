@@ -50,3 +50,28 @@ chmod g+w /media
 service apache2 restart
 python manage.py collectstatic
 ```
+## How to enable https visit for your website
+* Apply a free ssl certificate
+There are many companies that can offer free ssl certificates, you can go to www.freessl.cn to get one.
+* Upload ssl certificates to your server
+The ssl certificates can be put anywhere on your server, the directory /etc/apache2/sites-available is recommended.
+```
+scp full_chain.pem root@serverip:/etc/apache2/sites-available/
+scp private.key root@serverip:/etc/apache2/sites-available/
+```
+* Configure ssl for apache
+```
+scp /home/Blog-Django/apache/default-ssl.conf /etc/apache2/sites-available/
+```
+* Enable ssl for apache
+```
+a2enmod ssl
+a2ensite default-ssl
+service apache2 reload
+service apache2 restart
+```
+* Enable rewrite
+The port 80 should be redirected to port 443 in order to visit https automatically.
+```
+a2enmod rewrite
+service apache2 restart
