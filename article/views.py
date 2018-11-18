@@ -82,7 +82,7 @@ def addLove(request):
             love_count = int(love_count) + 1
             post = Article.objects.get(pk=int(id))
             post.lovecount += 1
-            post.save()
+            post.save(update_fields=['lovecount'])
             return HttpResponse(json.dumps(love_count))
 
 
@@ -94,7 +94,7 @@ def addLove_photo(request):
             love_count = int(love_count) + 1
             photo = Photo.objects.get(pk=int(id))
             photo.lovecount += 1
-            photo.save()
+            post.save(update_fields=['lovecount'])
             return HttpResponse(json.dumps(love_count))
 
 

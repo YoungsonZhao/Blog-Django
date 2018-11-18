@@ -42,5 +42,6 @@ urlpatterns = [
     url(r'^addLove/$', addLove, name='addLove'),
     url(r'^addLove_photo/$', addLove_photo, name='addLove_photo'),
     url(r'^photo_info/$', photo_info, name='photo_info'),
+    url(r'^index/sitemap\.xml$', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
