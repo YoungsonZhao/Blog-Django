@@ -85,7 +85,7 @@
 		width: 100%;
 	}
 
-	@media screen and (min-width: 537px) {
+	@media screen and (min-width: 737px) {
 
 		.container.\31 25\25 {
 			width: 100%;
@@ -111,7 +111,7 @@
 
 	}
 
-	@media screen and (min-width: 1001px) {
+	@media screen and (min-width: 1201px) {
 
 		.container.\31 25\25 {
 			width: 100%;
@@ -137,7 +137,7 @@
 
 	}
 
-	@media screen and (min-width: 537px) and (max-width: 1000px) {
+	@media screen and (min-width: 737px) and (max-width: 1200px) {
 
 		.container.\31 25\25 {
 			width: 100%;
@@ -163,7 +163,7 @@
 
 	}
 
-	@media screen and (min-width: 537px) and (max-width: 800px) {
+	@media screen and (min-width: 737px) and (max-width: 1000px) {
 
 		.container.\31 25\25 {
 			width: 100%;
@@ -189,7 +189,7 @@
 
 	}
 
-	@media screen and (max-width: 536px) {
+	@media screen and (max-width: 736px) {
 
 		.container.\31 25\25 {
 			width: 100%;
@@ -473,7 +473,7 @@
 		margin-left: 8.33333%;
 	}
 
-	@media screen and (min-width: 537px) {
+	@media screen and (min-width: 737px) {
 
 		.row > * {
 			padding: 50px 0 0 50px;
@@ -688,7 +688,7 @@
 
 	}
 
-	@media screen and (min-width: 1001px) {
+	@media screen and (min-width: 1201px) {
 
 		.row > * {
 			padding: 50px 0 0 50px;
@@ -903,7 +903,7 @@
 
 	}
 
-	@media screen and (min-width: 537px) and (max-width: 1000px) {
+	@media screen and (min-width: 737px) and (max-width: 1200px) {
 
 		.row > * {
 			padding: 50px 0 0 50px;
@@ -1118,7 +1118,7 @@
 
 	}
 
-	@media screen and (min-width: 537px) and (max-width: 800px) {
+	@media screen and (min-width: 737px) and (max-width: 1000px) {
 
 		.row > * {
 			padding: 50px 0 0 50px;
@@ -1333,7 +1333,7 @@
 
 	}
 
-	@media screen and (max-width: 536px) {
+	@media screen and (max-width: 736px) {
 
 		.row > * {
 			padding: 50px 0 0 50px;
@@ -2444,7 +2444,7 @@
 
 /* Desktop */
 
-	@media screen and (min-width: 537px) {
+	@media screen and (min-width: 737px) {
 
 		/* Basic */
 
@@ -2636,7 +2636,7 @@
 
 /* Wide */
 
-	@media screen and (min-width: 1001px) {
+	@media screen and (min-width: 1201px) {
 
 		/* Basic */
 
@@ -2792,7 +2792,7 @@
 
 /* Narrow */
 
-	@media screen and (min-width: 537px) and (max-width: 1000px) {
+	@media screen and (min-width: 737px) and (max-width: 1200px) {
 
 		/* Basic */
 
@@ -2904,7 +2904,7 @@
 
 /* Narrower */
 
-	@media screen and (min-width: 537px) and (max-width: 800px) {
+	@media screen and (min-width: 737px) and (max-width: 1000px) {
 
 		/* Basic */
 
@@ -2947,7 +2947,7 @@
 
 /* Mobile */
 
-	@media screen and (max-width: 536px) {
+	@media screen and (max-width: 736px) {
 
 		/* Basic */
 
@@ -3122,7 +3122,7 @@
 
 /* Off-Canvas Sidebar */
 
-	@media screen and (max-width: 800px) {
+	@media screen and (max-width: 1000px) {
 
 		/* Basic */
 

@@ -7,11 +7,11 @@
 (function($) {
 
 	skel.breakpoints({
-		desktop: '(min-width: 537px)',
-		wide: '(min-width: 1001px)',
-		narrow: '(min-width: 537px) and (max-width: 1000px)',
-		narrower: '(min-width: 537px) and (max-width: 800px)',
-		mobile: '(max-width: 536px)'
+		desktop: '(min-width: 737px)',
+		wide: '(min-width: 1201px)',
+		narrow: '(min-width: 737px) and (max-width: 1200px)',
+		narrower: '(min-width: 737px) and (max-width: 1000px)',
+		mobile: '(max-width: 736px)'
 	});
 
 	$(function() {
