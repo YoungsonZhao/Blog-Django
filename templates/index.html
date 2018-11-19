@@ -44,9 +44,9 @@
 
         </span>
 
-        <ul class="stats" style="padding:0em; margin:0em">
-          <li><a href="#" class="icon fa-comment">16</a></li>
-          <li><a href="javascript:void(0)" class="icon fa-heart" onclick="addLove({{post.id}})" id="a_love_{{post.id}}" >{{ post.lovecount }}</a></li>
+        <ul class="stats" style="padding:0em; margin:0.5em 0em 0em 0em">
+          <li><a href="#" class="fas fa-book-reader" style="margin:0.3em 0em 0.5em 0em; text-decoration:none;">&nbsp;&nbsp;&nbsp;{{post.views}}</a></li>
+          <li><a href="javascript:void(0)" class="fas fa-heart" style="margin:0.3em 0em 0.0em 0em; text-decoration:none;" onclick="addLove({{post.id}})" id="a_love_{{post.id}}" >&nbsp;&nbsp;&nbsp;{{ post.lovecount }}</a></li>
           <!--<li><a href="{% url "love" id=post.id path=request.path %}" class="icon fa-heart">{{ request.path }}</a></li>-->
         </ul>
       </div>
