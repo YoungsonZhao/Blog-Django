@@ -41,19 +41,15 @@
 			$(window).scroll(function() {
 			    var after = $(window).scrollTop();
 			    if (before<after && after > 64) {
-                                $('.titleBar').addClass('hiddened');
-			    }
-                            else{
-                                $('.titleBar').removeClass('hiddened');
-                            };
-			    if (before>after && Math.abs(after + window_height - doc_height) > 128) {
-                                $('.titleBar').addClass('showed');
-			    }
-                            else{
                                 $('.titleBar').removeClass('showed');
                                 $('.titleBar').addClass('hiddened');
-                            };
-                            if (after + window_height >= doc_height){
+			    };
+			    if (before>after && Math.abs(after + window_height - doc_height) > 128) {
+                                $('.titleBar').removeClass('hiddened');
+                                $('.titleBar').addClass('showed');
+			    };
+                            if (after + window_height > doc_height - 128){
+                                $('.titleBar').removeClass('showed');
                                 $('.titleBar').addClass('hiddened');
                             };
                             if (after < 64){
