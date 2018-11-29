@@ -18,7 +18,17 @@
 		$('form').placeholder();
 
 		// Prioritize "important" elements on mobile.
-		skel.on('+mobile -mobile', function() {$.prioritize('.important\\28 mobile\\29', skel.breakpoint('mobile').active);});
+		skel.on('+mobile -mobile', function() {
+                        $.prioritize('.important\\28 mobile\\29', skel.breakpoint('mobile').active);
+			$('<div class="titleBar">' + '<a href="#sidebar" class="toggle"></a>' + '<span class="title">' + $('#logo').html() + '</span>' + '</div>').appendTo($body);
+                       }
+                );
+
+		skel.on("ready", function() {
+			if (skel.breakpoint("mobile").active) {
+				$('<div class="titleBar">' + '<a href="#sidebar" class="toggle"></a>' + '<span class="title">' + $('#logo').html() + '</span>' + '</div>').appendTo($body);
+			}
+		});
 
 		// Off-Canvas Sidebar.
 
@@ -31,7 +41,35 @@
 		       .on('load', function() {$window.trigger('resize');}).trigger('resize');
 
 		// Title Bar.
-		$('<div id="titleBar">' + '<a href="#sidebar" class="toggle"></a>' + '<span class="title">' + $('#logo').html() + '</span>' + '</div>').appendTo($body);
+                $('<div class="titleBar">' + '<a href="#sidebar" class="toggle"></a>' + '<span class="title">' + $('#logo').html() + '</span>' + '</div>').appendTo($body);
+                var doc_height = $(document).height();
+                var window_height = $(window).height();
+		$(window).scroll(function(){
+			var before = $(window).scrollTop();
+                        if(before==0){
+                        };
+			$(window).scroll(function() {
+			    var after = $(window).scrollTop();
+			    if (before<after && after > 64) {
+                                $('.titleBar').removeClass('showed');
+                                $('.titleBar').addClass('hiddened');
+			    };
+			    if (before>after && Math.abs(after + window_height - doc_height) > 128) {
+                                $('.titleBar').removeClass('hiddened');
+                                $('.titleBar').addClass('showed');
+			    };
+                            if (after + window_height > doc_height - 128){
+                                $('.titleBar').removeClass('showed');
+                                $('.titleBar').addClass('hiddened');
+                            };
+                            if (after < 64){
+                                $('.titleBar').removeClass('hiddened');
+                                $('.titleBar').addClass('showed');
+                            };
+			    before = after;
+			});
+		}); 
+
 
 		// Sidebar
 		$('#sidebar').panel({
