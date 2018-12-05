@@ -32,7 +32,7 @@
           {% elif post.date_time.month == 10 %}
               <span class="month">Oct.</span>
           {% elif post.date_time.month == 11 %}
-              <span class="month">Mov.</span>
+              <span class="month">Nov.</span>
           {% else %}
               <span class="month">Dec.</span>
           {% endif %}
@@ -44,8 +44,8 @@
         </span>
 
         <ul class="stats" style="padding:0em; margin:0.5em 0em 0em 0em">
-          <li><a href="#" class="fas fa-book-reader" style="margin:0.3em 0em 0.5em 0em; text-decoration:none;">&ensp;{{post.views}}</a></li>
-          <li><a href="javascript:void(0)" class="fas fa-heart" style="margin:0.3em 0em 0.0em 0em; text-decoration:none;" onclick="addLove({{post.id}})" id="a_love_{{post.id}}" >&ensp;{{post.lovecount}}</a></li>
+          <li><a href="#" class="fas fa-book-reader" style="margin:0.3em 0em 0.5em 0em; text-decoration:none; font-size: 1.0em; letter-spacing: -0.1em;">{{post.views}}</a></li>
+          <li><a href="javascript:void(0)" class="fas fa-heart" style="margin:0.3em 0em 0.0em 0em; text-decoration:none; font-size: 1.0em; letter-spacing: -0.1em;" onclick="addLove({{post.id}})" id="a_love_{{post.id}}" >{{post.lovecount}}</a></li>
           <!--<li><a href="{% url "love" id=post.id path=request.path %}" class="icon fa-heart">{{ request.path }}</a></li>-->
         </ul>
     </div>
