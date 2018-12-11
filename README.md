@@ -36,17 +36,17 @@ git clone git@github.com:YoungsonZhao/Blog-Django.git
 Configure mod_wsgi in apache2.
 ```
 cd /home/Blog-Django/apache
-cp 000-default /etc/apache2/enable-sites
+cp 000-default /etc/apache2/sites-enable
 cp apache.conf /ets/apache2/
 ```
 Enable read and write rights for apache2
 ```
 cd /home
-chown -R www-data:www-data /Blog-Django
-cd /Blgo-Django
+chown -R www-data:www-data Blog-Django
+cd Blgo-Django
 chmod g+w db.sqlite3
-chmod g+w /static
-chmod g+w /media
+chmod g+w static
+chmod g+w media
 service apache2 restart
 python manage.py collectstatic
 ```
