@@ -30,18 +30,15 @@ apt-get install libapache2-mod-wsgi
 * Configuring Apache and mod_wsgi
 Clone this Blog-Django source code to /home directory.
 ```
-cd /home
 git clone git@github.com:YoungsonZhao/Blog-Django.git
 ```
 Configure mod_wsgi in apache2.
 ```
-cd /home/Blog-Django/apache
-cp 000-default /etc/apache2/sites-enable
-cp apache.conf /ets/apache2/
+cp Blog-Django/apache/000-default /etc/apache2/sites-enabled
+cp Blog-Django/apache2.conf /ets/apache2/
 ```
 Enable read and write rights for apache2
 ```
-cd /home
 chown -R www-data:www-data Blog-Django
 cd Blgo-Django
 chmod g+w db.sqlite3
